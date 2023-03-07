@@ -4,39 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo</title>
+    <title>Meu Site</title>
 </head>
 <body>
-    <form action="">
-        <fieldset>
-            <legend>Formulário</legend>
-            <input type="text" placeholder="Digite seu nome"/><br>
-            <input type="password" placeholder="Digite sua senha"/><br>
-            <input type="email" placeholder="Digite seu email"/><br>
-            <input type="number" placeholder="Digite seu numero"/><br>
-            <input type="radio" id="rdoF" name="rdoSexo" value="F">
-            <label for="rdoF">Feminino</label>
-            <input type="radio" id="rdoM" name="rdoSexo" value="M">
-            <label for="rdoF">Masculino</label><br>
-            <input type="checkbox" id="chkManha" name="chkManha" checked>
-            <label for="scales">Manhã</label>
-            <input type="checkbox" id="chkTarde" name="chkTarde">
-            <label for="scales">Tarde</label><br>
-            <input type="file"/><br>
-            <input type="color"/><br>
-            <input type="time"/><br>
-            <input type="date"/><br>
-            <input type="datetime-local"/><br>
-            <input type="range"><br>
-            <textarea  cols="30" rows="10"></textarea><br>
-            <select>
-                <option value="">-Selecione</option>
-                <option value="HTML">HTML</option>
-                <option value="CSS">CSS</option>
-                <option value="JavaScript">JavaScript</option>
-            </select><br>
-            <input type="submit" value="Enviar">
-        </fieldset>
-    </form>
+    <header>
+        <section>
+                <img src="./imagens/logo.png" alt="logo da empresa SPTO" width="200px">
+    
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="inicio.html">
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contato.html">
+                                Contato
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--Fim do menu do site-->
+            </section>
+        </header>
+    <!--inicio main-->
+    <main>
+        <!--Inicio da section do site-->
+        <section>
+            <!--Conteudo de texto sobre o site-->
+            <article>
+                <h1>Formulario de Contatos</h1>
+                <p>Preencha os dados e envie sua mensagem de contato.</p>
+                <fieldset>
+                    <legend>
+                        <h5>Dados de Contato</h5>
+                    </legend>
+                    <form id="frmInscricao" action="contato.php" method="POST">
+
+                        <label for="">Nome</label><br>
+                        <input type="text" required="required" id="txtNome" maxlength="100" size="50"><br><br>
+                        
+                        <label>Data de Nascimento:</label><br>
+                        <input type="date" required="required"id="txtDataNascimento"><br><br>
+
+                        <!--Completar as opçoes de sexo  que possa escplher apenas uma opçao-->
+                        <label >Sexo</label><br>
+
+                        <input type="radio" name="rdoSexo" value="M" required="required">
+                        <label>Masculino</label>
+                        <br><br>
+
+                        <input type="radio" name="rdoSexo" value="F">
+                        <label>Feminino</label>
+                        <br><br>
+
+                        
+                        <label>Endereço:</label><br>
+                        <input type="text" required="required" id="txtLogradouro"
+                        maxlength="100" size="50"><br><br>
+
+                        <label >Estado</label><br>
+                        <select  id="cbxEstado" required="required">
+                            <option value="">-Selecione-</option>
+                            <option value="1">SC</option>
+                            <option value="2">MG</option>
+                        </select><br><br>
+
+                        <label>Cidade:</label><br>
+                            <select id="cbxCidade" required="required">
+                                <option value="">-Selecione-</option>
+                                <option value="1">Florianópolis</optio>
+                                <option value="2">Uberlândia</option>
+                            </select><br><br>
+
+                        <label>Celular:</label><br>
+                        <input type="tel" required="required" id="txtCelular" size="50" placeholder="(##) #####-####"
+                        maxlength="15"><br><br>
+
+                        <label>E-mail</label>
+                        <input type="email" required="required" size="50" id="txtEmail"><br><br>
+
+                        <label>Áreas de Interesse:</label><br>
+                        <input type="checkbox" value="HTML" name="chkAreasInteresse">
+                        <label>HTML</label>
+                        <input type="checkbox" value="CSS" name="chkAreasInteresse">
+                        <label>CSS</label>
+                        <input type="checkbox" value="JavaScript"
+                        name="chkAreasInteresse">
+                        <label>JavaScript</label><br><br>
+                        <label>Mensagem:</label><br><br>
+                        <textarea cols="50" rows="5" required="required">
+                        </textarea><br><br>
+                        <input id="btnEnviar" type="submit" value="Enviar" />
+                    </form>
+                </fieldset>
+
+            </article>
+            <!--Fim do conteúdo de texto sobre o site-->
+        </section>
+        <!--Fim do conteudo do site-->
+    </main>
+    <!--Fim da main-->
+     <!-- Início do footer -->
+    <footer>
+    <!-- Início das redes sociais -->
+        <ul>
+            <li>
+                <a href="#">
+                <img src="./imagens/logo-insta.png" alt="Instagram" />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <img src="./imagens/logo-twitter.png" alt="Twitter" />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <img src="./imagens/logo-facebook.png" alt="Facebook" />
+                </a>
+            </li>
+        </u>
+    <!-- Fim das redes sociais -->
+    </footer>
+    <!-- Fim do footer -->
 </body>
 </html>
